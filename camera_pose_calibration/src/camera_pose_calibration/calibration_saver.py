@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 Subscribes to the topic which provides the calibration information from
 camera_pose_calibration and writes it to an XML file
@@ -9,7 +11,6 @@ roslib.load_manifest('camera_pose_calibration')
 
 import rospy
 import argparse
-import time
 import datetime
 import xml.etree.ElementTree as ET
 from camera_pose_calibration.msg import CameraCalibration
@@ -17,9 +18,11 @@ from camera_pose_calibration.msg import CameraCalibration
 parser = argparse.ArgumentParser()
 parser.add_argument('xmlFile',
                     help='Destination file for calibration data')
+parser.add_argument('ROS', help='Catches the ROS arguments if provided by roslaunch',
+                    nargs="+")
 args = parser.parse_args()
 filename = args.xmlFile
-
+# filename = 'test.xml'
 
 def callback(msg):
     # Build XML tree
