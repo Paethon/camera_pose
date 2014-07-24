@@ -26,7 +26,7 @@
   <node pkg="camera_pose_calibration" type="start_interval_intersection.py" name="start_interval_intersection"
         args="$(arg camera1_ns) $(arg camera2_ns)" output="screen" />
   <node pkg="camera_pose_calibration" type="filter_intervals.py" name="filter_intervals">
-    <param name="min_duration" value="0.5" />
+    <param name="min_duration" value="1.0" />
     <remap from="features" to="$(arg camera1_ns)/features" />
     <remap from="interval" to="intersected_interval"/>
   </node>
