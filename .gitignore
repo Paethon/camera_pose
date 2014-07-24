@@ -1,0 +1,13 @@
+*.pyc
+/camera_pose_calibration/src/camera_pose_calibration/__init__.py
+/camera_pose_calibration/build/
+/camera_pose_calibration/msg_gen/
+/camera_pose_calibration/src/camera_pose_calibration/msg/
+/camera_pose_toolkits/bin/
+/camera_pose_toolkits/build/
+/camera_pose_toolkits/src/camera_pose_toolkits/__init__.py
+/camera_pose_toolkits/src/camera_pose_toolkits/srv/
+/camera_pose_toolkits/srv_gen/
+/kinect_depth_calibration/build/
+/kinect_depth_calibration/src/
+/kinect_depth_calibration/srv_gen/
